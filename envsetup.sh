@@ -134,8 +134,10 @@ function check_product()
         HIDE_MAKEFILE_INCLUDES=y
     else
         DARKKAT_BUILD=
+        HIDE_MAKEFILE_INCLUDES=n
     fi
     export DARKKAT_BUILD
+    export HIDE_MAKEFILE_INCLUDES
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
