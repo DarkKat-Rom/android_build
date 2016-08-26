@@ -572,7 +572,7 @@ function breakfast()
     elif [ "$type" != "ALPHA" ]; then
         type="BETA"
     fi
-    export DK_RELEASE_TYPE=$type
+    export DK_BUILD_TYPE=$type
     DK_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
