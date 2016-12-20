@@ -569,8 +569,6 @@ function breakfast()
     local type=$2
     if [ -z "$type" ]; then
         type="UNOFFICIAL"
-    elif [ "$type" != "ALPHA" ]; then
-        type="BETA"
     fi
     export DK_BUILD_TYPE=$type
     DK_DEVICES_ONLY="true"
