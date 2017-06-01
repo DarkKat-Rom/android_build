@@ -566,13 +566,13 @@ return $?
 function breakfast()
 {
     target=$1
-    local type=$2
-    if [ -z "$type" ]; then
-        type="UNOFFICIAL"
-    elif [ "$type" != "ALPHA" ]; then
-        type="BETA"
+    local type="TEST"
+    local customtype=$2
+    if [ -z "$customtype" ]; then
+        export DK_BUILD_TYPE=$customtype
+    else
+        export DK_BUILD_TYPE=$type
     fi
-    export DK_BUILD_TYPE=$type
     DK_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
