@@ -569,9 +569,9 @@ function breakfast()
     local type="RELEASE"
     local customtype=$2
     if [ -z "$customtype" ]; then
-        export DK_BUILD_TYPE=$customtype
-    else
         export DK_BUILD_TYPE=$type
+    else
+        export DK_BUILD_TYPE=$customtype
     fi
     DK_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
