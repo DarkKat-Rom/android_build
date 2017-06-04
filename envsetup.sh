@@ -566,7 +566,7 @@ return $?
 function breakfast()
 {
     target=$1
-    local type="RELEASE"
+    local type="TEST"
     local customtype=$2
     if [ -z "$customtype" ]; then
         export DK_BUILD_TYPE=$type
